@@ -22,10 +22,9 @@ this.currentQuestion =0;
 this.question = this.quiz[this.currentQuestion].question;
 this.options = this.quiz[this.currentQuestion].options;
 this.id = this.quiz[this.currentQuestion].id;
-
 }
 
-
+//TODO: can be moved to service, access data using DI
  quiz: any[] = [
       {
         id: 1,
@@ -83,8 +82,7 @@ submitAnswer(){
 this.question = "";
   this.options = null;
   this.id = 0;
-  // this.router.navigate(['result'], {queryParams: {score: this.score}});
-   
+  
    console.log(this.score);
   }
   else {
