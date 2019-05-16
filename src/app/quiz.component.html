@@ -1,0 +1,20 @@
+
+<div *ngIf="score == ''">
+  <span>
+    {{question}}
+  </span>
+   <ul>
+         <li *ngFor="let option of options">
+               <input type="radio" name= {{id}} (click)="getValue( option)"        
+               value= {{option}}>
+              <span>{{option}}</span>       
+     
+        </li>
+    </ul>
+  <label> {{errorMessage}} </label>
+  <br>
+  <br>
+  <button type="button" (click)="nextQuestion() " [style.display]="!isHidden ? 'none' : 'block'">Next</button>
+  <button type="button" (click)="submitAnswer()" [style.display]="isHidden ? 'none' : 'block'">Submit</button>
+</div> 
+<div *ngIf="score != ''">Score is: {{score}}</div>
